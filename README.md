@@ -18,11 +18,13 @@ Cada tela tem uma issue com tarefas e critério de pronto, e um artboard no canv
 ## Contrato com o shell
 
 - Expõe `./App` em `remoteEntry.js` (porta 5177 em dev).
-- `./App` recebe `{ basePath, getToken, eventBus }` (veja `src/contracts.ts`).
+- `./App` recebe `{ basePath, getToken, eventBus }` (tipos de `@ruan-diego/mini-event-contracts`).
 - Fala com outros microfrontends só por eventos; nunca importa código deles.
 - `react`, `react-dom` e `react-router-dom` são compartilhados como singleton.
 
 ## Rodando
+
+Os pacotes `@ruan-diego/mini-design-system` e `@ruan-diego/mini-event-contracts` vêm do GitHub Packages, que exige token até para ler. Uma vez: `gh auth refresh -h github.com -s read:packages` e, no seu `~/.npmrc`, a linha `//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}`. Antes do install, no PowerShell: `$env:GITHUB_TOKEN = gh auth token`. Detalhes no README do [mini-ecommerce-ui](https://github.com/Ruan-Diego/mini-ecommerce-ui#consumindo-nos-microfrontends).
 
 ```bash
 pnpm install

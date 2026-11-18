@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { ShellDev } from './dev/ShellDev';
-import './styles/tokens.css';
+import '@ruan-diego/mini-design-system/tokens.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

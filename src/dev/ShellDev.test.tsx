@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { ShellDev } from './ShellDev';
-import type { PropsRemoto } from '../contracts';
+import type { PropsRemoto } from '@ruan-diego/mini-event-contracts';
 
 /** MFE de mentira: mostra a rota, emite eventos e lê o token. */
 function AppDeTeste({ eventBus, getToken }: PropsRemoto) {

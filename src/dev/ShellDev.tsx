@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState, type ComponentType } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@ruan-diego/mini-design-system';
+import { criarEventBus, type EventosMini, type NomeEvento, type PropsRemoto } from '@ruan-diego/mini-event-contracts';
 import './shell-dev.css';
-import { criarEventBus, type EventosMini, type NomeEvento, type PropsRemoto } from '../contracts';
 
 /** Record (e não array) para o TypeScript acusar se o contrato ganhar um evento e ele faltar aqui. */
 const EVENTOS: Record<NomeEvento, true> = {
@@ -69,15 +70,15 @@ export function ShellDev({ nome, App, alvo = window }: Props) {
             <span className="mono">{nome}</span> · modo standalone · {registros.length} evento(s)
           </summary>
           <div className="shell-dev-acoes">
-            <button type="button" className="btn btn-sec btn-sm" onClick={alternarLogin} aria-pressed={logado}>
+            <Button variante="secundario" pequeno onClick={alternarLogin} aria-pressed={logado}>
               {logado ? 'Simular logout' : 'Simular login'}
-            </button>
-            <button type="button" className="btn btn-sec btn-sm" onClick={() => eventBus.emit('carrinho:abrir', {})}>
+            </Button>
+            <Button variante="secundario" pequeno onClick={() => eventBus.emit('carrinho:abrir', {})}>
               Emitir carrinho:abrir
-            </button>
-            <button type="button" className="btn btn-ghost btn-sm" onClick={() => setRegistros([])}>
+            </Button>
+            <Button variante="ghost" pequeno onClick={() => setRegistros([])}>
               Limpar
-            </button>
+            </Button>
           </div>
           <ol className="shell-dev-log" aria-live="polite">
             {registros.map((r) => (
