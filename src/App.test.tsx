@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import { criarEventBus } from './contracts';
+import { criarEventBus } from '@ruan-diego/mini-event-contracts';
 
 describe('mfe-conta', () => {
   it('renderiza a primeira tela a partir do basePath', () => {

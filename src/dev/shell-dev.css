@@ -1,0 +1,7 @@
+/* Painel do shell falso (só no modo standalone). */
+.shell-dev{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin-left:auto;background:var(--s2);border:1px solid var(--line2);border-radius:var(--r-md);font-size:13px;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.shell-dev summary{cursor:pointer;min-height:var(--alvo);display:flex;align-items:center;gap:6px;padding:0 var(--sp-4);color:var(--mu)}
+.shell-dev summary:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:var(--r-md)}
+.shell-dev-acoes{display:flex;flex-wrap:wrap;gap:var(--sp-2);padding:0 var(--sp-4) var(--sp-3)}
+.shell-dev-log{list-style:none;margin:0;padding:var(--sp-3) var(--sp-4);max-height:200px;overflow:auto;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.shell-dev-log code{font-family:var(--fm);color:var(--tx);word-break:break-all}
