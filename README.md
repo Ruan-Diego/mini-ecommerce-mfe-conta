@@ -27,8 +27,23 @@ Cada tela tem uma issue com tarefas e critério de pronto, e um artboard no canv
 ```bash
 pnpm install
 pnpm dev        # standalone em http://localhost:5177
+pnpm lint
+pnpm typecheck
 pnpm test
 pnpm build      # gera dist/remoteEntry.js
 ```
+
+Para ver dentro do shell, rode `pnpm build && pnpm preview` aqui e `pnpm dev` no shell.
+
+### Modo standalone
+
+O `pnpm dev` monta o `./App` dentro de um shell falso (`src/dev/ShellDev.tsx`), que passa as mesmas props do shell real e mostra um painel no canto da tela:
+
+- lista os eventos do contrato que passam pelo event bus (o que o MFE emite e o que o painel simula);
+- **Simular login/logout** emite `auth:alterado` e faz `getToken()` devolver um token de desenvolvimento;
+- **Emitir carrinho:abrir** simula o clique no carrinho do header;
+- o evento `navegar` troca de rota, como o shell faria.
+
+O `ShellDev` só existe no `bootstrap.tsx`; o shell real importa apenas o `./App`.
 
 Para ver dentro do shell, rode `pnpm build && pnpm preview` aqui e `pnpm dev` no shell.
