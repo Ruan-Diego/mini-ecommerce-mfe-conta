@@ -1,0 +1,36 @@
+/* Telas da conta. Tokens e componentes (.card, .side, .pill, .btn, .field...) vêm do design system. */
+.conta { padding-top: 48px; padding-bottom: 96px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+.conta-nav { flex: 1 1 220px; max-width: 260px; display: flex; flex-direction: column; gap: 6px; }
+.conta-nav a { min-height: 44px; display: flex; align-items: center; }
+.conta-conteudo { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 32px; }
+.conta-titulo { font-size: clamp(36px, 6vw, 56px); margin: 0; }
+
+.perfil { padding: 28px; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.perfil-avatar { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font: 600 26px var(--fd); color: var(--bg); background: radial-gradient(circle at 34% 28%, #fbffe8 0 3%, #d9f78a 14%, #9dc93a 42%, #3d5410 80%); }
+.perfil-dados { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 200px; }
+
+.conta-secao { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.conta-secao h2 { margin: 0; }
+.grade-enderecos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px; }
+.endereco { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.endereco-principal { border-color: var(--ac); }
+.endereco-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.endereco-acoes { display: flex; gap: 8px; padding-top: 4px; flex-wrap: wrap; }
+.endereco-acoes .btn, .form-acoes .btn, .perfil .btn { min-height: 44px; }
+.btn-perigo { color: var(--bad); }
+.aviso-bloqueio { font-size: 12px; }
+
+.form-endereco { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.form-endereco h3 { margin: 0; }
+.form-grade { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px 16px; }
+.form-grade .f-2 { grid-column: span 2; }
+.form-grade .f-3 { grid-column: span 3; }
+.form-grade .f-4 { grid-column: span 4; }
+.form-grade .f-6 { grid-column: span 6; }
+@media (max-width: 640px) { .form-grade > * { grid-column: span 6 !important; } }
+.form-acoes { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+
+.atalhos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px; }
+.atalho { padding: 24px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; min-height: 44px; color: var(--tx); }
+.atalho:hover { border-color: var(--ac); }
+.atalho span { display: flex; flex-direction: column; gap: 4px; }
