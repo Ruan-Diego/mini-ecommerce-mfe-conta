@@ -58,3 +58,8 @@ export function resumoDosItens(pedido: Pedido) {
   if (!primeiro) return 'Sem itens';
   return resto.length === 0 ? primeiro.nome : `${primeiro.nome} + ${resto.length} ${resto.length === 1 ? 'item' : 'itens'}`;
 }
+
+export const formatarDataHora = (iso: string) =>
+  new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(
+    new Date(iso),
+  );

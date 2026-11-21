@@ -49,3 +49,30 @@
 .estado-vazio .btn { min-height: 44px; }
 .paginacao { display: flex; align-items: center; justify-content: center; gap: 16px; }
 .paginacao .btn { min-height: 44px; }
+
+.conta-detalhe { padding-top: 48px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 24px; }
+.voltar { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; width: fit-content; color: var(--tx); }
+.detalhe-topo { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.detalhe-esqueleto { height: 320px; }
+.detalhe-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 24px; align-items: start; }
+.detalhe-coluna { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.detalhe-bloco { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.detalhe-bloco h2, .detalhe-bloco p, .detalhe-bloco address { margin: 0; }
+.detalhe-acoes { display: flex; gap: 12px; flex-wrap: wrap; }
+.detalhe-acoes .btn, .form-acoes .btn { min-height: 44px; }
+.tempo { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.tempo li { display: flex; gap: 12px; align-items: flex-start; }
+.tempo-ponto { width: 14px; height: 14px; margin-top: 4px; border-radius: 50%; border: 2px solid var(--line2); flex: none; }
+.tempo-feita .tempo-ponto { background: var(--ac); border-color: var(--ac); }
+.tempo-atual .tempo-ponto { border-color: var(--ac); box-shadow: 0 0 0 4px rgba(200, 242, 90, .2); }
+.tempo-pendente { opacity: .55; }
+.tempo-texto { display: flex; flex-direction: column; gap: 2px; }
+.itens-pedido { width: 100%; border-collapse: collapse; }
+.itens-pedido th, .itens-pedido td { padding: 10px 8px; text-align: right; border-bottom: 1px solid var(--line); }
+.itens-pedido th[scope='col']:first-child, .itens-pedido th[scope='row'] { text-align: left; font-weight: 500; }
+.valores { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.valores > div { display: flex; justify-content: space-between; gap: 16px; }
+.valores dt { color: var(--mu); }
+.valores dd { margin: 0; }
+.valores-total { font-weight: 600; font-size: 18px; border-top: 1px solid var(--line); padding-top: 8px; }
+.erro-modal { color: var(--bad); }
