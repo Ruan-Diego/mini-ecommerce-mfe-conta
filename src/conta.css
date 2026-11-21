@@ -34,3 +34,18 @@
 .atalho { padding: 24px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; min-height: 44px; color: var(--tx); }
 .atalho:hover { border-color: var(--ac); }
 .atalho span { display: flex; flex-direction: column; gap: 4px; }
+
+.conta-titulo-menor { margin: 0; }
+.filtros-pedidos { display: flex; flex-wrap: wrap; gap: 8px; }
+.filtros-pedidos .chip { min-height: 44px; }
+.lista-pedidos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.pedido-linha { padding: 20px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; text-decoration: none; color: var(--tx); min-height: 44px; }
+.pedido-linha:hover { border-color: var(--ac); }
+.pedido-info { flex: 1 1 220px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.pedido-total { font: 600 18px var(--fm); min-width: 110px; text-align: right; }
+.pedido-esqueleto { height: 82px; opacity: .5; }
+.estado-vazio { padding: 32px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.estado-vazio p { margin: 0; }
+.estado-vazio .btn { min-height: 44px; }
+.paginacao { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.paginacao .btn { min-height: 44px; }
